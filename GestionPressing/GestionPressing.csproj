@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C852C2D8-D73F-4BB7-96EA-E6459EC1E79D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GestionPressing</RootNamespace>
+    <AssemblyName>GestionPressing</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ajoutlaveur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ajoutlaveur.Designer.cs">
+      <DependentUpon>ajoutlaveur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clients.cs" />
+    <Compile Include="Dedomages.cs" />
+    <Compile Include="Factures.cs" />
+    <Compile Include="fichelavage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fichelavage.Designer.cs">
+      <DependentUpon>fichelavage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulaireblanchissement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaireblanchissement.Designer.cs">
+      <DependentUpon>formulaireblanchissement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulairecompartiment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulairecompartiment.Designer.cs">
+      <DependentUpon>formulairecompartiment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulairecomptable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulairecomptable.Designer.cs">
+      <DependentUpon>formulairecomptable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulairededomages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulairededomages.Designer.cs">
+      <DependentUpon>formulairededomages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulaireincidents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaireincidents.Designer.cs">
+      <DependentUpon>formulaireincidents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulairevetement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulairevetement.Designer.cs">
+      <DependentUpon>formulairevetement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulaireclientele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaireclientele.Designer.cs">
+      <DependentUpon>formulaireclientele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Infofacture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Infofacture.Designer.cs">
+      <DependentUpon>Infofacture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="payerfacture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payerfacture.Designer.cs">
+      <DependentUpon>payerfacture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="selectionnerclient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="selectionnerclient.Designer.cs">
+      <DependentUpon>selectionnerclient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vetements.cs" />
+    <EmbeddedResource Include="ajoutlaveur.resx">
+      <DependentUpon>ajoutlaveur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fichelavage.resx">
+      <DependentUpon>fichelavage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulaireblanchissement.resx">
+      <DependentUpon>formulaireblanchissement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulairecompartiment.resx">
+      <DependentUpon>formulairecompartiment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulairecomptable.resx">
+      <DependentUpon>formulairecomptable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulairededomages.resx">
+      <DependentUpon>formulairededomages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulaireincidents.resx">
+      <DependentUpon>formulaireincidents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulairevetement.resx">
+      <DependentUpon>formulairevetement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulaireclientele.resx">
+      <DependentUpon>formulaireclientele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Infofacture.resx">
+      <DependentUpon>Infofacture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payerfacture.resx">
+      <DependentUpon>payerfacture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="selectionnerclient.resx">
+      <DependentUpon>selectionnerclient.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
